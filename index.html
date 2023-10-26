@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light_Dark</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        padding: 25px;
+        font-size: 25px;
+        font-family: sans-serif;
+        transition: background-color 0.5s, color 0.5s;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .dark_mode {
+        background-color: black;
+        color: white;
+      }
+      button {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      .light-mode {
+        background: rgb(0, 67, 161);
+        color: #ffffff;
+      }
+      .dark-mode {
+        background: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mode-heading">PEACE</h1>
+    <p id="mode-para">Haii, This is Hashirama Senju</p>
+    <button class="light-mode" onclick="toggleMode()">
+      <i class="fas fa-sun"></i> Light Mode
+    </button>
+    <script>
+      function toggleMode() {
+        const body = document.body;
+        const button = document.querySelector("button");
+        const heading = document.getElementById("mode-heading");
+        const para = document.getElementById("mode-para");
+
+        if (body.classList.contains("dark_mode")) {
+          body.classList.remove("dark_mode");
+          button.classList.remove("dark-mode");
+          button.classList.add("light-mode");
+          button.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+          heading.textContent = "PEACE";
+          para.textContent = "Haii, This is Hashirama Senju";
+        } else {
+          body.classList.add("dark_mode");
+          button.classList.remove("light-mode");
+          button.classList.add("dark-mode");
+          button.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+          heading.textContent = "PAIN";
+          para.textContent = "Wake Up to Reality,  This is MADARA UCHIHA ";
+        }
+      }
+    </script>
+  </body>
+</html>
