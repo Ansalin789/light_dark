@@ -46,7 +46,7 @@
     <h1 id="mode-heading">PEACE</h1>
     <p id="mode-para">Haii, This is Hashirama Senju</p>
     <button class="light-mode" onclick="toggleMode()">
-      <i class="fas fa-sun"></i> Light Mode
+      <i class="fas fa-sun"></i> Dark Mode
     </button>
     <script>
       function toggleMode() {
@@ -59,14 +59,14 @@
           body.classList.remove("dark_mode");
           button.classList.remove("dark-mode");
           button.classList.add("light-mode");
-          button.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+          button.innerHTML = '<i class="fas fa-sun"></i> Dark Mode';
           heading.textContent = "PEACE";
           para.textContent = "Haii, This is Hashirama Senju";
         } else {
           body.classList.add("dark_mode");
           button.classList.remove("light-mode");
           button.classList.add("dark-mode");
-          button.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+          button.innerHTML = '<i class="fas fa-moon"></i> Light Mode';
           heading.textContent = "PAIN";
           para.textContent = "Wake Up to Reality,  This is MADARA UCHIHA ";
         }
